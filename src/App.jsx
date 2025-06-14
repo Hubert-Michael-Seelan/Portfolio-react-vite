@@ -5,13 +5,12 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import SlideInSection from "./common/SlideInSection";
 import Experience from "./components/Experience/Experience";
-import Education from "./components/Education/Education";
 import Skills from "./components/Skills/Skills";
-import Certifications from "./components/Certificates/Certificates";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { lightTheme, darkTheme } from "./theme";
+import Academic from "./components/Academic/Academic";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -32,15 +31,11 @@ function App() {
         </SlideInSection>
 
         <SlideInSection direction="left">
-          <Education />
-        </SlideInSection>
-
-        <SlideInSection direction="right">
-          <Skills />
+          <Academic />
         </SlideInSection>
 
         <SlideInSection direction="left">
-          <Certifications />
+          <Skills />
         </SlideInSection>
 
         <SlideInSection direction="right">
