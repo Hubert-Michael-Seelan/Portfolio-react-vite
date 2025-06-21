@@ -17,7 +17,7 @@ const experienceData = [
   {
     role: "Full Stack Developer",
     company: "Kodukku Classified Pvt Ltd, Chennai",
-    period: "Jul 2024 – Present",
+    period: "June 2024 – Present",
     website: "https://kodukku.com/",
     bullets: [
       "🎬 Built a dedicated 'Talent Show' microservice (Node.js) alongside the main classifieds backend to handle video posts and user interactions independently.",

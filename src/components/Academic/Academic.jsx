@@ -22,7 +22,7 @@ const degrees = [
   {
     degree: "B.Sc. in Mathematics",
     school: "Patrician College of Arts and Science, Chennai",
-    period: "Jun 2017 – Mar 2020",
+    period: "Jun 2017 – May 2020",
   },
 ];
 
