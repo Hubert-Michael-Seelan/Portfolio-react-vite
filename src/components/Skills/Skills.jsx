@@ -47,7 +47,7 @@ const skillList = [
   { label: "NodeJS", pct: 65 },
   { label: "MongoDB", pct: 50 },
   { label: "MS SQL", pct: 55 },
-  { label: "Firebase", pct: 25 },
+  { label: "Firebase", pct: 40 },
   { label: "Redis", pct: 45 },
   { label: "Git", pct: 85 },
   { label: "GitHub", pct: 80 },
