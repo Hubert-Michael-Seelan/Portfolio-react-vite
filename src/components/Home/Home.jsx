@@ -49,6 +49,7 @@ const Home = () => {
         color: "white",
         position: "relative",
         overflow: "hidden",
+        borderRadius: "12px",
       }}
     >
       {/* SVG Blob behind the image */}
