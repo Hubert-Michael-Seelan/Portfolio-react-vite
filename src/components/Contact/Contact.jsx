@@ -23,10 +23,10 @@ export default function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "YOUR_PUBLIC_KEY"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => setStatus({ success: true, message: "Message sent!" }),
@@ -79,32 +79,32 @@ export default function Contact() {
             }}
           >
             <form ref={formRef} onSubmit={handleSubmit} noValidate>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                  <TextField
-                    name="user_name"
-                    label="Name"
-                    variant="outlined"
-                    fullWidth
-                    required
-                  />
-                  <TextField
-                    name="user_email"
-                    label="Email"
-                    variant="outlined"
-                    fullWidth
-                    required
-                    type="email"
-                  />
-                  <TextField
-                    name="message"
-                    label="Message"
-                    variant="outlined"
-                    fullWidth
-                    required
-                    multiline
-                    rows={4}
-                  />
-                </Box>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                <TextField
+                  name="user_name"
+                  label="Name"
+                  variant="outlined"
+                  fullWidth
+                  required
+                />
+                <TextField
+                  name="user_email"
+                  label="Email"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  type="email"
+                />
+                <TextField
+                  name="message"
+                  label="Message"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  multiline
+                  rows={4}
+                />
+              </Box>
               <Box
                 sx={{ display: "flex", justifyContent: "flex-start", mt: 3 }}
               >
