@@ -15,7 +15,7 @@ import {
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ProfileImg from "../../assets/images/hms_profile.jpg";
+import ProfileImg from "../../assets/images/hms_profile.png";
 import resume from "../../assets/pdf/Hubert Michael Seelan.pdf";
 
 const textVariant = {
