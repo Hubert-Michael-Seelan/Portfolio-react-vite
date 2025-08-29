@@ -12,7 +12,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
   return (
     <AppBar position="static">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography variant="h6">My Portfolio</Typography>
+        <Typography variant="h6">Hubert.Dev</Typography>
         <div style={{ display: "flex", alignItems: "center" }}>
           <Button color="inherit" href="#experience">
             Experience
