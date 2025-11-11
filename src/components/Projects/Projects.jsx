@@ -95,7 +95,7 @@ const Projects = () => {
                         sx={{ alignItems: "flex-start" }}
                       >
                         <ListItemIcon sx={{ minWidth: 32, color: "#fff" }}>
-                          <CheckCircleIcon fontSize="small" />
+                          {/* <CheckCircleIcon fontSize="small" /> */}
                         </ListItemIcon>
                         <ListItemText
                           primary={text}

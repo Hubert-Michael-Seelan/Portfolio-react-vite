@@ -11,11 +11,14 @@ import {
   Stack,
   Container,
   useTheme,
+  Chip,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ProfileImg from "../../assets/images/hms_profile.png";
+import InsertChartIcon from "@mui/icons-material/InsertChart";
+import AssessmentIcon from "@mui/icons-material/Assessment";
+import ProfileImg from "../../assets/images/hms_profile.jpg";
 import resume from "../../assets/pdf/Hubert Michael Seelan.pdf";
 
 const textVariant = {
@@ -27,10 +30,18 @@ const textVariant = {
   }),
 };
 
+const stats = [
+  { label: "Projects", value: 6 },
+  { label: "Dashboards", value: 3 },
+  // { label: "Kaggle Notebooks", value: 2 },
+];
+
 const Home = () => {
   const githubUrl = "https://github.com/Hubert-Michael-Seelan";
   const linkedInUrl =
     "https://www.linkedin.com/in/hubert-michael-seelan-a-6624a8235/";
+  const kaggleUrl = "https://www.kaggle.com/"; // TODO: replace with your Kaggle profile
+  const dashboardsUrl = "/projects"; // points to your Projects section/page
   const certificatesUrl =
     "https://drive.google.com/drive/folders/1LFFaFsZobb9EQJV41CE5wL-wVss7JHwz";
   const theme = useTheme();
@@ -52,7 +63,7 @@ const Home = () => {
         borderRadius: "12px",
       }}
     >
-      {/* SVG Blob behind the image */}
+      {/* SVG Blob behind the image (unchanged) */}
       <Box
         component="svg"
         viewBox="0 0 200 200"
@@ -73,7 +84,7 @@ const Home = () => {
       </Box>
 
       <Grid container spacing={4} alignItems="center">
-        {/* Left: organic-shaped profile card */}
+        {/* Left: organic-shaped profile card (unchanged) */}
         <Grid item xs={12} sm={6}>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
@@ -106,7 +117,8 @@ const Home = () => {
             </Box>
           </motion.div>
         </Grid>
-        {/* Right: content */}
+
+        {/* Right: content (updated copy + chips + CTAs) */}
         <Grid item xs={12} sm={6} md={6} sx={{ width: "70%" }}>
           <Stack spacing={2}>
             <motion.div
@@ -115,26 +127,34 @@ const Home = () => {
               custom={0.5}
               variants={textVariant}
             >
-              <Typography variant="h3" component="h1">
+              <Typography
+                variant="h3"
+                component="h1"
+                sx={{ display: "flex", alignItems: "center", gap: 1 }}
+              >
                 Hello, I’m{" "}
                 <Box component="span" fontWeight="bold">
                   Hubert
                 </Box>
+                <Box component="span" sx={{ fontSize: "1.8rem" }}>
+                  👋
+                </Box>
               </Typography>
             </motion.div>
-
+            {/* Data Analytics headline */}
             <motion.div
               initial="hidden"
               animate="visible"
               custom={1}
               variants={textVariant}
             >
-              <Typography variant="h5" fontStyle="italic">
-                “Building bridges between ideas and reality, one line of code at
-                a time.”
+              <Typography variant="h5" sx={{ fontStyle: "bold" }}>
+                Data Analyst & Full-Stack Developer — turning data into
+                decisions.
               </Typography>
             </motion.div>
 
+            {/* Short value statement + bullets */}
             <motion.div
               initial="hidden"
               animate="visible"
@@ -142,25 +162,58 @@ const Home = () => {
               variants={textVariant}
             >
               <Typography variant="body1">
-                As a Full‑Stack MERN Developer, I architect seamless user
-                experiences, optimize backend performance, and ensure every
-                click tells a story.
+                As a growing Data Analyst, I specialize in cleaning messy
+                datasets, analyzing patterns, and building interactive
+                dashboards that highlight key business trends.
               </Typography>
               <Box component="ul" sx={{ pl: 3, mt: 1 }}>
-                <li>🔧 Crafting intuitive interfaces that empower users.</li>
+                <li>📊 Power BI/Tableau dashboards for leadership decisions</li>
                 <li>
-                  ⚡ Designing scalable APIs that handle high load gracefully.
+                  🧹 Data wrangling in SQL & pandas for clean, reliable data
                 </li>
                 <li>
-                  🔒 Implementing secure data flows to protect what matters.
+                  📈 Time-series & clustering for forecasting & segmentation
                 </li>
               </Box>
             </motion.div>
 
+            {/* KPI chips */}
             <motion.div
               initial="hidden"
               animate="visible"
               custom={2}
+              variants={textVariant}
+            >
+              <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
+                {stats.map((s) => (
+                  <Chip
+                    key={s.label}
+                    icon={
+                      s.label === "Dashboards" ? (
+                        <InsertChartIcon />
+                      ) : (
+                        <AssessmentIcon />
+                      )
+                    }
+                    label={`${s.value} ${s.label}`}
+                    sx={{
+                      bgcolor:
+                        theme.palette.mode === "dark"
+                          ? "rgba(255,255,255,0.08)"
+                          : "rgba(0,0,0,0.08)",
+                      color: "inherit",
+                      fontWeight: 600,
+                    }}
+                  />
+                ))}
+              </Box>
+            </motion.div>
+
+            {/* Socials */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              custom={2.3}
               variants={textVariant}
             >
               <Box sx={{ display: "flex", gap: 1 }}>
@@ -181,13 +234,14 @@ const Home = () => {
               </Box>
             </motion.div>
 
+            {/* CTAs */}
             <motion.div
               initial="hidden"
               animate="visible"
               custom={2.5}
               variants={textVariant}
             >
-              <Box sx={{ display: "flex", gap: 2 }}>
+              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
                   size="large"
