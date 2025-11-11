@@ -31,7 +31,7 @@ const textVariant = {
 };
 
 const stats = [
-  { label: "Projects", value: 6 },
+  { label: "Projects", value: 4 },
   { label: "Dashboards", value: 3 },
   // { label: "Kaggle Notebooks", value: 2 },
 ];
@@ -40,8 +40,8 @@ const Home = () => {
   const githubUrl = "https://github.com/Hubert-Michael-Seelan";
   const linkedInUrl =
     "https://www.linkedin.com/in/hubert-michael-seelan-a-6624a8235/";
-  const kaggleUrl = "https://www.kaggle.com/"; // TODO: replace with your Kaggle profile
-  const dashboardsUrl = "/projects"; // points to your Projects section/page
+  const kaggleUrl = "https://www.kaggle.com/"; 
+  const dashboardsUrl = "/projects"; 
   const certificatesUrl =
     "https://drive.google.com/drive/folders/1LFFaFsZobb9EQJV41CE5wL-wVss7JHwz";
   const theme = useTheme();

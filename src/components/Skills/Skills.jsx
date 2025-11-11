@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import mssql from "../../assets/icons/sql-server-icon.svg";
 import nodejs from "../../assets/icons/Node.js_logo.svg.png";
 import msexcel from "../../assets/icons/msexcel.jpg";
+import vsc from "../../assets/icons/VSC.jpg";
 import redis from "../../assets/icons/redis.png";
 
 const iconMap = {
@@ -52,7 +53,7 @@ const iconMap = {
   Tableau: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg",
   Figma: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
   // Canva: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Canva_Logo.svg",
-  "VS Code": "https://code.visualstudio.com/assets/images/code-stable.png",
+  "VS Code": vsc,
   Colab:
     "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg",
   "Jupyter Notebook":
