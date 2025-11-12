@@ -23,7 +23,7 @@ function App() {
         darkMode={darkMode}
         toggleDarkMode={() => setDarkMode((d) => !d)}
       />
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ p: 2, overflowX: "hidden" }}>
         {/* Hero section */}
         <Home />
         <SlideInSection direction="right">

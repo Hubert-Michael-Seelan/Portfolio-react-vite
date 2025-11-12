@@ -9,7 +9,6 @@ import {
   Card,
   CardMedia,
   Stack,
-  Container,
   useTheme,
   Chip,
 } from "@mui/material";
@@ -26,22 +25,19 @@ const textVariant = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.3, ease: "easeOut" },
+    transition: { delay: i * 0.25, ease: "easeOut" },
   }),
 };
 
 const stats = [
   { label: "Projects", value: 4 },
   { label: "Dashboards", value: 3 },
-  // { label: "Kaggle Notebooks", value: 2 },
 ];
 
 const Home = () => {
   const githubUrl = "https://github.com/Hubert-Michael-Seelan";
   const linkedInUrl =
     "https://www.linkedin.com/in/hubert-michael-seelan-a-6624a8235/";
-  const kaggleUrl = "https://www.kaggle.com/"; 
-  const dashboardsUrl = "/projects"; 
   const certificatesUrl =
     "https://drive.google.com/drive/folders/1LFFaFsZobb9EQJV41CE5wL-wVss7JHwz";
   const theme = useTheme();
@@ -63,7 +59,7 @@ const Home = () => {
         borderRadius: "12px",
       }}
     >
-      {/* SVG Blob behind the image (unchanged) */}
+      {/* SVG Blob behind the image */}
       <Box
         component="svg"
         viewBox="0 0 200 200"
@@ -73,7 +69,7 @@ const Home = () => {
           left: "-10%",
           width: "60vw",
           height: "60vw",
-          opacity: 0.15,
+          opacity: 0.12,
           fill: theme.palette.mode === "dark" ? "#1e1e2f" : "#ffffff",
         }}
       >
@@ -84,12 +80,12 @@ const Home = () => {
       </Box>
 
       <Grid container spacing={4} alignItems="center">
-        {/* Left: organic-shaped profile card (unchanged) */}
+        {/* Left: profile card */}
         <Grid item xs={12} sm={6}>
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <Card
@@ -118,39 +114,76 @@ const Home = () => {
           </motion.div>
         </Grid>
 
-        {/* Right: content (updated copy + chips + CTAs) */}
-        <Grid item xs={12} sm={6} md={6} sx={{ width: "70%" }}>
+        {/* Right: content */}
+        <Grid item xs={12} sm={6}>
           <Stack spacing={2}>
+            {/* Responsive headline: stacked on mobile, inline on larger */}
             <motion.div
               initial="hidden"
               animate="visible"
-              custom={0.5}
+              custom={0.4}
+              variants={textVariant}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: { xs: "column", sm: "row" },
+                  alignItems: { xs: "center", sm: "baseline" },
+                  gap: 1,
+                  textAlign: { xs: "center", sm: "left" },
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    fontWeight: 500,
+                    color: "rgba(255,255,255,0.9)",
+                  }}
+                >
+                  Hello, I’m
+                </Typography>
+
+                <Typography
+                  variant="h3"
+                  component="div"
+                  sx={{
+                    fontWeight: "700",
+                    lineHeight: 1,
+                    mt: { xs: 0.5, sm: 0 },
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <Box component="span">Hubert</Box>
+                  <Box
+                    component="span"
+                    aria-hidden
+                    sx={{ fontSize: { xs: "1.4rem", sm: "1.8rem" } }}
+                  >
+                    👋
+                  </Box>
+                </Typography>
+              </Box>
+            </motion.div>
+
+            {/* Short headline tuned for fresher -> data analytics */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              custom={0.9}
               variants={textVariant}
             >
               <Typography
-                variant="h3"
-                component="h1"
-                sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                variant="h6"
+                sx={{
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.95)",
+                }}
               >
-                Hello, I’m{" "}
-                <Box component="span" fontWeight="bold">
-                  Hubert
-                </Box>
-                <Box component="span" sx={{ fontSize: "1.8rem" }}>
-                  👋
-                </Box>
-              </Typography>
-            </motion.div>
-            {/* Data Analytics headline */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={1}
-              variants={textVariant}
-            >
-              <Typography variant="h5" sx={{ fontStyle: "bold" }}>
-                Data Analyst & Full-Stack Developer — turning data into
-                decisions.
+                Aspiring Data Analyst • Full-Stack Background
               </Typography>
             </motion.div>
 
@@ -158,21 +191,32 @@ const Home = () => {
             <motion.div
               initial="hidden"
               animate="visible"
-              custom={1.5}
+              custom={1.2}
               variants={textVariant}
             >
-              <Typography variant="body1">
-                As a growing Data Analyst, I specialize in cleaning messy
-                datasets, analyzing patterns, and building interactive
-                dashboards that highlight key business trends.
+              <Typography
+                variant="body1"
+                sx={{ color: "rgba(255,255,255,0.92)" }}
+              >
+                I focus on cleaning datasets, exploring patterns, and building
+                clear dashboards that help teams make decisions.
               </Typography>
-              <Box component="ul" sx={{ pl: 3, mt: 1 }}>
-                <li>📊 Power BI/Tableau dashboards for leadership decisions</li>
+
+              <Box
+                component="ul"
+                sx={{
+                  pl: 3,
+                  mt: 1,
+                  textAlign: { xs: "center", sm: "left" },
+                  "& li": { marginBottom: 0.5 },
+                }}
+              >
+                <li>📊 Interactive dashboards to reveal business insights</li>
                 <li>
-                  🧹 Data wrangling in SQL & pandas for clean, reliable data
+                  🧹 Data wrangling with SQL & pandas for reliable analysis
                 </li>
                 <li>
-                  📈 Time-series & clustering for forecasting & segmentation
+                  📈 Simple time-based analysis and segmentation experiments
                 </li>
               </Box>
             </motion.div>
@@ -181,10 +225,17 @@ const Home = () => {
             <motion.div
               initial="hidden"
               animate="visible"
-              custom={2}
+              custom={1.6}
               variants={textVariant}
             >
-              <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: 1,
+                  flexWrap: "wrap",
+                  justifyContent: { xs: "center", sm: "flex-start" },
+                }}
+              >
                 {stats.map((s) => (
                   <Chip
                     key={s.label}
@@ -199,8 +250,8 @@ const Home = () => {
                     sx={{
                       bgcolor:
                         theme.palette.mode === "dark"
-                          ? "rgba(255,255,255,0.08)"
-                          : "rgba(0,0,0,0.08)",
+                          ? "rgba(255,255,255,0.06)"
+                          : "rgba(0,0,0,0.06)",
                       color: "inherit",
                       fontWeight: 600,
                     }}
@@ -209,54 +260,56 @@ const Home = () => {
               </Box>
             </motion.div>
 
-            {/* Socials */}
+            {/* Socials + CTAs */}
             <motion.div
               initial="hidden"
               animate="visible"
-              custom={2.3}
+              custom={2}
               variants={textVariant}
             >
-              <Box sx={{ display: "flex", gap: 1 }}>
-                <IconButton
-                  aria-label="GitHub"
-                  onClick={() => window.open(githubUrl, "_blank")}
-                  sx={{ color: "white" }}
-                >
-                  <GitHubIcon fontSize="large" />
-                </IconButton>
-                <IconButton
-                  aria-label="LinkedIn"
-                  onClick={() => window.open(linkedInUrl, "_blank")}
-                  sx={{ color: "white" }}
-                >
-                  <LinkedInIcon fontSize="large" />
-                </IconButton>
-              </Box>
-            </motion.div>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: 2,
+                  alignItems: "center",
+                  justifyContent: { xs: "center", sm: "flex-start" },
+                  flexWrap: "wrap",
+                }}
+              >
+                <Box sx={{ display: "flex", gap: 1 }}>
+                  <IconButton
+                    aria-label="GitHub"
+                    onClick={() => window.open(githubUrl, "_blank")}
+                    sx={{ color: "white" }}
+                  >
+                    <GitHubIcon fontSize="large" />
+                  </IconButton>
+                  <IconButton
+                    aria-label="LinkedIn"
+                    onClick={() => window.open(linkedInUrl, "_blank")}
+                    sx={{ color: "white" }}
+                  >
+                    <LinkedInIcon fontSize="large" />
+                  </IconButton>
+                </Box>
 
-            {/* CTAs */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={2.5}
-              variants={textVariant}
-            >
-              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-                <Button
-                  variant="contained"
-                  size="large"
-                  onClick={() => window.open(resume, "_blank")}
-                >
-                  Download CV
-                </Button>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  onClick={() => window.open(certificatesUrl, "_blank")}
-                  sx={{ borderColor: "white", color: "white" }}
-                >
-                  Certificates
-                </Button>
+                <Box sx={{ display: "flex", gap: 1 }}>
+                  <Button
+                    variant="contained"
+                    size="medium"
+                    onClick={() => window.open(resume, "_blank")}
+                  >
+                    Download CV
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    size="medium"
+                    onClick={() => window.open(certificatesUrl, "_blank")}
+                    sx={{ borderColor: "white", color: "white" }}
+                  >
+                    Certificates
+                  </Button>
+                </Box>
               </Box>
             </motion.div>
           </Stack>

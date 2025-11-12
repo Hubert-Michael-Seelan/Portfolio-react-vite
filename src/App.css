@@ -5,3 +5,15 @@ body {
   margin: 0;
   font-family: Roboto, sans-serif;
 }
+/* src/index.css (or App.css) */
+html, body, #root {
+  overflow-x: hidden; /* prevent horizontal scrollbar globally */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure any large svgs/images don't overflow */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
