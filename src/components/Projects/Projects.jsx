@@ -285,7 +285,7 @@ export default function Projects() {
           display: "flex",
           gap: 1,
           justifyContent: "center",
-          mt: 3,
+          mt: 6,
         }}
       >
         {projectData.map((_, i) => (
