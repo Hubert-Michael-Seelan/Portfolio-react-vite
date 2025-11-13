@@ -15,8 +15,6 @@ import {
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import GitHubIcon from "@mui/icons-material/GitHub";
-
-// Demo images
 import MusicDemo from "../../assets/images/music_demo.png";
 import ContraDemo from "../../assets/images/ecommerce_img.png";
 import RetailDemo from "../../assets/images/retail_demo.png";
@@ -33,7 +31,7 @@ const projectData = [
       "Processed 3,000+ records to extract sales & profit insights.",
       "Generated trend reports & visual summaries for business impact.",
     ],
-    liveLink: "https://github.com/your-repo/retail-sales-analysis",
+    liveLink: "https://github.com/Hubert-Michael-Seelan/Retail_Sales_Mini_Project_Python",
   },
   {
     id: "powerbi",
@@ -92,8 +90,8 @@ export default function Projects() {
     return () => window.removeEventListener("keydown", onKey);
   }, [next, prev]);
 
-  const radius = 260; // spread horizontally
-  const radiusY = 60; // subtle vertical offset
+  const radius = 260;
+  const radiusY = 60; 
   const step = (Math.PI * 2) / n;
 
   return (

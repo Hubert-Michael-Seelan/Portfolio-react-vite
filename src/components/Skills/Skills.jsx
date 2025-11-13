@@ -71,9 +71,9 @@ const skillCategories = [
   {
     category: "Libraries & Frameworks",
     skills: [
-      { label: "Pandas", pct: 75 },
-      { label: "NumPy", pct: 70 },
-      { label: "Seaborn", pct: 60 },
+      { label: "Pandas", pct: 80 },
+      { label: "NumPy", pct: 80 },
+      { label: "Seaborn", pct: 70 },
       { label: "Matplotlib", pct: 65 },
       { label: "ReactJS", pct: 80 },
       { label: "Node.js", pct: 70 },
@@ -83,8 +83,8 @@ const skillCategories = [
   {
     category: "Databases",
     skills: [
-      { label: "MongoDB", pct: 70 },
-      { label: "MS SQL", pct: 60 },
+      { label: "MongoDB", pct: 60 },
+      { label: "MS SQL", pct: 80 },
       { label: "MySQL", pct: 65 },
     ],
   },
