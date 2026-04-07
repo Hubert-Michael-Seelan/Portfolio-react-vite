@@ -19,6 +19,7 @@ const iconMap = {
   Python:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   JavaScript: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+  Java : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   Pandas: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg",
   NumPy:
     "https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg",
@@ -66,18 +67,19 @@ const skillCategories = [
     skills: [
       { label: "Python", pct: 85 },
       { label: "JavaScript", pct: 80 },
+      { label: "Java", pct: 60 },
     ],
   },
   {
     category: "Libraries & Frameworks",
     skills: [
+      { label: "ReactJS", pct: 80 },
+      { label: "Node.js", pct: 70 },
+      { label: "ExpressJS", pct: 65 },
       { label: "Pandas", pct: 80 },
       { label: "NumPy", pct: 80 },
       { label: "Seaborn", pct: 70 },
       { label: "Matplotlib", pct: 65 },
-      { label: "ReactJS", pct: 80 },
-      { label: "Node.js", pct: 70 },
-      { label: "ExpressJS", pct: 65 },
     ],
   },
   {
@@ -112,14 +114,14 @@ const skillCategories = [
   {
     category: "Web Tools & IDEs",
     skills: [
-      { label: "Git", pct: 85 },
-      { label: "GitHub", pct: 80 },
-      { label: "Postman", pct: 75 },
-      { label: "Netlify", pct: 70 },
+      { label: "Git", pct: 100 },
+      { label: "GitHub", pct: 100 },
+      { label: "Postman", pct: 100 },
+      { label: "Netlify", pct: 100 },
       // { label: "Render", pct: 65 },
-      { label: "VS Code", pct: 90 },
-      { label: "Colab", pct: 75 },
-      { label: "Jupyter Notebook", pct: 80 },
+      { label: "VS Code", pct: 100 },
+      { label: "Colab", pct: 100 },
+      { label: "Jupyter Notebook", pct: 100 },
     ],
   },
 ];
