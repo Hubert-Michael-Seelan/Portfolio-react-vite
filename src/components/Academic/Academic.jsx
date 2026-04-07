@@ -25,7 +25,7 @@ const certs = [
   {
     title: "Data Analytics",
     issuer: "ACTE Technologies",
-    period: "Sep 2025 – Oct 2025",
+    period: "Sep 2025 – Nov 2025",
   },
   {
     title: "Full Stack Web Development (MERN Stack)",

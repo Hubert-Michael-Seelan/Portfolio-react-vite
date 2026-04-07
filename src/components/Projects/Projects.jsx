@@ -22,6 +22,30 @@ import PowerBIDemo from "../../assets/images/powerbi_demo.png";
 
 const projectData = [
   {
+    id: "music",
+    title: "Online Music Player",
+    image: MusicDemo,
+    gradient: "linear-gradient(135deg, #00BCD4 0%, #4CAF50 100%)",
+    bullets: [
+      "Built MERN-based music app with Redux & Tailwind CSS.",
+      "Secure auth, MongoDB Atlas & RESTful API integration.",
+      "FFmpeg media optimization for smooth playback.",
+    ],
+    liveLink: "https://applemusicapp.netlify.app/",
+  },
+  {
+    id: "contra",
+    title: "Contra (E-commerce)",
+    image: ContraDemo,
+    gradient: "linear-gradient(135deg, #F57C00 0%, #E91E63 100%)",
+    bullets: [
+      "Full MERN stack e-commerce site with Redux & Node.js.",
+      "Integrated product APIs with dynamic cart & checkout.",
+      "Modern UI with responsive, fluid Tailwind layout.",
+    ],
+    liveLink: "https://contra-ecommerce.netlify.app/",
+  },
+  {
     id: "retail",
     title: "Retail Sales Data Analysis",
     image: RetailDemo,
@@ -45,30 +69,6 @@ const projectData = [
     ],
     liveLink:
       "https://github.com/Hubert-Michael-Seelan/Case_Study_with_Power-BI",
-  },
-  {
-    id: "music",
-    title: "Online Music Player",
-    image: MusicDemo,
-    gradient: "linear-gradient(135deg, #00BCD4 0%, #4CAF50 100%)",
-    bullets: [
-      "Built MERN-based music app with Redux & Tailwind CSS.",
-      "Secure auth, MongoDB Atlas & RESTful API integration.",
-      "FFmpeg media optimization for smooth playback.",
-    ],
-    liveLink: "https://applemusicapp.netlify.app/",
-  },
-  {
-    id: "contra",
-    title: "Contra (E-commerce)",
-    image: ContraDemo,
-    gradient: "linear-gradient(135deg, #F57C00 0%, #E91E63 100%)",
-    bullets: [
-      "Full MERN stack e-commerce site with Redux & Node.js.",
-      "Integrated product APIs with dynamic cart & checkout.",
-      "Modern UI with responsive, fluid Tailwind layout.",
-    ],
-    liveLink: "https://contra-ecommerce.netlify.app/",
   },
 ];
 

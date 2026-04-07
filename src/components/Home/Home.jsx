@@ -183,11 +183,10 @@ const Home = () => {
                   color: "rgba(255,255,255,0.95)",
                 }}
               >
-                Aspiring Data Analyst • Full-Stack Background
+                Full-Stack Developer 💻
               </Typography>
             </motion.div>
 
-            {/* Short value statement + bullets */}
             <motion.div
               initial="hidden"
               animate="visible"
@@ -196,10 +195,19 @@ const Home = () => {
             >
               <Typography
                 variant="body1"
-                sx={{ color: "rgba(255,255,255,0.92)" }}
+                sx={{
+                  color: "rgba(255,255,255,0.92)",
+                  maxWidth: "600px",          
+                  mx: "auto",                 
+                  textAlign: "left",   
+                  fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem", lg: "1.2rem" },    
+                  wordBreak: "break-word",   
+                  lineHeight: 1.6,           
+                }}
               >
-                I focus on cleaning datasets, exploring patterns, and building
-                clear dashboards that help teams make decisions.
+                I build scalable web applications using modern technologies,
+                focusing on clean architecture, efficient APIs, and responsive
+                user interfaces.
               </Typography>
 
               <Box
@@ -211,18 +219,18 @@ const Home = () => {
                   "& li": { marginBottom: 0.5 },
                 }}
               >
-                <li>📊 Interactive dashboards to reveal business insights</li>
                 <li>
-                  🧹 Data wrangling with SQL & pandas for reliable analysis
+                  ⚛️ Building dynamic UIs with React.js and reusable components
                 </li>
+                <li>🛠️ Developing REST APIs using Node.js & Express</li>
+                <li>🗄️ Managing databases with MongoDB & SQL</li>
                 <li>
-                  📈 Simple time-based analysis and segmentation experiments
+                  🚀 Optimizing performance and ensuring smooth user experience
                 </li>
               </Box>
             </motion.div>
 
-            {/* KPI chips */}
-            <motion.div
+            {/* <motion.div
               initial="hidden"
               animate="visible"
               custom={1.6}
@@ -258,9 +266,8 @@ const Home = () => {
                   />
                 ))}
               </Box>
-            </motion.div>
+            </motion.div> */}
 
-            {/* Socials + CTAs */}
             <motion.div
               initial="hidden"
               animate="visible"

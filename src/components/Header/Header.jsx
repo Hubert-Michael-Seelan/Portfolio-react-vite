@@ -54,7 +54,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               fontWeight: 700,
             }}
           >
-            Hubert.Analyst
+            Hubert.Dev
           </Typography>
         </Box>
 

@@ -19,7 +19,7 @@ const experienceData = [
   {
     role: "Full Stack Developer",
     company: "Kodukku Classified Pvt Ltd, Chennai",
-    period: "June 2024 – Present",
+    period: "July 2024 – July 2025",
     website: "https://kodukku.com/",
     bullets: [
       "🎬 Built a dedicated 'Talent Show' microservice (Node.js) alongside the main classifieds backend to handle video posts and user interactions independently.",
@@ -30,13 +30,13 @@ const experienceData = [
     ],
   },
   {
-    role: "Frontend Developer (Intern)",
-    company: "ParkQwik, Chennai",
-    period: "Jan 2024 – Apr 2024",
+    role: "Software Developer",
+    company: "Evolve Automotive, Chennai",
+    period: "May 2023 – July 2024",
     bullets: [
-      "📱 Developed 2 React Native components for the ParkQwik mobile app.",
-      "🎨 Designed 30+ promotional Canvas banners to boost user engagement.",
-      "🐞 Fixed over 5 critical bugs, delivering a 95% bug-free experience.",
+      "📱 Contributed to frontend development using React.js by building reusable UI components.",
+      "🎨 Supported backend development tasks using Node.js and Express.js.",
+      "🐞 Participated in debugging, testing, and resolving application issues.",
     ],
   },
   {
