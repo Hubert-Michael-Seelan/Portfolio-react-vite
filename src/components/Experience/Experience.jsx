@@ -40,12 +40,12 @@ const experienceData = [
     ],
   },
   {
-    role: "US IT Recruiter",
+    role: "Junior Developer",
     company: "Lorven Technologies Inc, Chennai",
     period: "Mar 2022 – May 2023",
     bullets: [
-      "🔍 Sourced 40+ qualified US candidates per month via Ceipal ATS and LinkedIn.",
-      "🚀 Managed end-to-end recruitment, reducing average time-to-fill by 90%.",
+      "🔍 Developed reusable frontend components using React.js, improving UI consistency.",
+      "🚀 Assisted in backend API integration and data flow handling.",
     ],
   },
 ];
