@@ -197,12 +197,17 @@ const Home = () => {
                 variant="body1"
                 sx={{
                   color: "rgba(255,255,255,0.92)",
-                  maxWidth: "600px",          
-                  mx: "auto",                 
-                  textAlign: "left",   
-                  fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem", lg: "1.2rem" },    
-                  wordBreak: "break-word",   
-                  lineHeight: 1.6,           
+                  maxWidth: "600px",
+                  mx: "auto",
+                  textAlign: "left",
+                  fontSize: {
+                    xs: "0.95rem",
+                    sm: "1rem",
+                    md: "1.1rem",
+                    lg: "1.2rem",
+                  },
+                  wordBreak: "break-word",
+                  lineHeight: 1.6,
                 }}
               >
                 I build scalable web applications using modern technologies,
@@ -284,23 +289,6 @@ const Home = () => {
                 }}
               >
                 <Box sx={{ display: "flex", gap: 1 }}>
-                  <IconButton
-                    aria-label="GitHub"
-                    onClick={() => window.open(githubUrl, "_blank")}
-                    sx={{ color: "white" }}
-                  >
-                    <GitHubIcon fontSize="large" />
-                  </IconButton>
-                  <IconButton
-                    aria-label="LinkedIn"
-                    onClick={() => window.open(linkedInUrl, "_blank")}
-                    sx={{ color: "white" }}
-                  >
-                    <LinkedInIcon fontSize="large" />
-                  </IconButton>
-                </Box>
-
-                <Box sx={{ display: "flex", gap: 1 }}>
                   <Button
                     variant="contained"
                     size="medium"
@@ -316,6 +304,22 @@ const Home = () => {
                   >
                     Certificates
                   </Button>
+                </Box>
+                <Box sx={{ display: "flex", gap: 1 }}>
+                  <IconButton
+                    aria-label="GitHub"
+                    onClick={() => window.open(githubUrl, "_blank")}
+                    sx={{ color: "white" }}
+                  >
+                    <GitHubIcon fontSize="large" />
+                  </IconButton>
+                  {/* <IconButton
+                    aria-label="LinkedIn"
+                    onClick={() => window.open(linkedInUrl, "_blank")}
+                    sx={{ color: "white" }}
+                  >
+                    <LinkedInIcon fontSize="large" />
+                  </IconButton> */}
                 </Box>
               </Box>
             </motion.div>
